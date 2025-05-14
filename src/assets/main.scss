@@ -1,0 +1,37 @@
+@use 'base.scss';
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+#modals {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+}
+
+.default-modal-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  padding-inline: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@media (hover: hover) {
+}

@@ -1,0 +1,35 @@
+/* BaseInput.module.scss */
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+
+  span {
+    color: white;
+    font-size: 14px;
+  }
+
+  input {
+    border: 2px solid transparent;
+    padding: 8px;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+
+    &:focus {
+      border: 2px solid rgb(154, 77, 255);
+    }
+
+    &:disabled {
+      color: rgb(114, 114, 114);
+    }
+  }
+}
+
+.errorMessage {
+  color: rgb(180, 54, 54) !important;
+  font-size: 10px !important;
+  height: 14px !important;
+}

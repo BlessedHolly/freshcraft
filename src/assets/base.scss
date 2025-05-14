@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans';
+}
+
+body:has(#modals:has(*)) {
+  overflow: hidden;
+}
+
+a {
+  font-family: 'Noto Sans';
+}
+
+h1 {
+  font-size: 24px;
+}

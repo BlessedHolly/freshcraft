@@ -1,0 +1,76 @@
+.dlcItem {
+  background-color: rgb(17, 17, 17);
+  padding-top: 80px;
+
+  .head {
+    height: 608px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 96px;
+      width: 100%;
+      background-image: url("/trans-bottom.png");
+      background-repeat: repeat-x;
+    }
+  }
+
+  .textContainer {
+    padding: 80px 18px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .title {
+      color: rgb(154, 77, 255);
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+
+    .buttonsContainer {
+      display: flex;
+      gap: 16px;
+      padding-block: 16px;
+    }
+
+    .galleryContainer {
+      margin: 0 auto;
+      max-width: 950px;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+
+      .thumbsSwiper {
+        margin-top: 30px;
+
+        :global(.swiper-slide-thumb-active) {
+          border: 2px solid rgb(154, 77, 255);
+        }
+      }
+    }
+
+    .video {
+      display: block;
+      margin: 30px auto 0;
+      max-width: 950px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}

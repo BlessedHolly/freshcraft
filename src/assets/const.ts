@@ -1,0 +1,5 @@
+export const ROUTER_PREFIX = 'FRESHCRAFT | '
+export const SECTION_MIN_HEIGHT_KEY = 'sectionMinHeight'
+export const LOCAL_STORAGE_ACCESS_TOKEN_KEY = 'access_token'
+export const LOCAL_STORAGE_ACCESS_TOKEN_TYPE_KEY = 'access_token_type'
+export const LAST_EMAIL_VERIFY_RESEND_TIMESTAMP_KEY = 'last_evr_timestamp'

@@ -1,0 +1,11 @@
+.profile {
+  background-color: rgb(17, 17, 17);
+  min-height: var(--sectionMinHeight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  row-gap: 16px;
+  flex-grow: 1;
+}

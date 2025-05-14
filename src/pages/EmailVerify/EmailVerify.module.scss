@@ -1,0 +1,45 @@
+section.microsoftCallback {
+  background-color: rgb(17, 17, 17);
+  min-height: var(--sectionMinHeight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  row-gap: 16px;
+  color: white;
+  flex-grow: 1;
+  padding-top: 80px;
+
+  h1 {
+    margin-block: 0;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+    height: 80px;
+
+    .loadingIcon {
+      width: 32px;
+      margin-block: auto;
+    }
+
+    p {
+      margin: 0;
+
+      &.redirectText {
+        font-size: 14px;
+        color: rgb(201, 201, 201);
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .result {
+    margin-block: 30px;
+  }
+}

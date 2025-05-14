@@ -1,0 +1,76 @@
+.attentionWrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  align-items: center;
+}
+
+.attentionContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  max-width: 380px;
+  border-radius: 10px;
+  background-color: white;
+  pointer-events: all;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDown 0.2s ease-in forwards;
+  position: relative;
+  width: max-content;
+  transition: transform 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+
+  svg {
+    min-width: 20px;
+    max-width: 20px;
+  }
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.attentionContainer.exit {
+  animation: slideUp 0.2s ease-in forwards;
+}
+
+.icon {
+  background: white;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+
+  svg {
+    color: #e74c3c;
+  }
+}
+
+svg.successSvg {
+  color: #28b780;
+}
+
+.cross {
+  color: #171717;
+  cursor: pointer;
+}

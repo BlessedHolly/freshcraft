@@ -1,0 +1,104 @@
+.button {
+  user-select: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border-bottom: 8px solid rgb(43, 29, 59);
+  height: fit-content;
+
+  &.microsoftStyle {
+    border-color: rgb(110, 110, 110);
+
+    > div {
+      background-color: white;
+      column-gap: 2px;
+
+      span {
+        color: black;
+      }
+    }
+  }
+
+  &.fullSpace {
+    width: 100%;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    border-bottom-color: rgb(41, 41, 41);
+
+    > div {
+      background-color: rgb(97, 97, 97);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover > div {
+      transform: translateY(4px);
+    }
+  }
+
+  @media (hover: none) {
+    &:active > div {
+      transform: translateY(4px);
+    }
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: var(--justifyContent, center);
+    height: 40px;
+    padding-inline: 16px;
+    background-color: rgb(154, 77, 255);
+
+    &.big {
+      height: 48px;
+
+      span {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    &.epic {
+      height: 52px;
+
+      span {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    span {
+      color: white;
+      font-family: "Noto Sans";
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+
+    svg {
+      width: 32px;
+    }
+  }
+}
+
+summary.button::after {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: block;
+  transform: translateY(-50%);
+  content: "";
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  background-image: url(/play-details-button/button-details-default.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

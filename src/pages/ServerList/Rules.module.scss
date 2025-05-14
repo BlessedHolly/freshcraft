@@ -1,0 +1,108 @@
+.rules {
+  background-color: rgb(17, 17, 17);
+  min-height: 100vh;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px;
+    max-width: 1280px;
+    margin-inline: auto;
+
+    h1 {
+      margin-block: 0 24px;
+      color: white;
+      font-size: 36px;
+      line-height: 40px;
+      font-weight: 700;
+      padding-top: 80px;
+    }
+
+    h2 {
+      margin-block: 0 16px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      color: white;
+    }
+
+    h3 {
+      margin-block: 0 16px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: white;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 32px;
+      color: rgb(209, 213, 219);
+      margin-block: 0 16px;
+    }
+
+    a {
+      color: rgb(154, 77, 255);
+    }
+
+    blockquote {
+      padding-left: 18px;
+      border-left: 4px solid rgb(55, 65, 81);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 32px;
+      font-style: italic;
+      color: white;
+      margin: 30px 0;
+    }
+
+    ol,
+    ul {
+      margin-block: 0;
+      padding-left: 28px;
+
+      li {
+        color: rgb(209, 213, 219);
+        padding-left: 8px;
+        font-size: 18px;
+        line-height: 32px;
+        margin-block: 12px;
+
+        &:not(:first-of-type) h3 {
+          margin-block: 32px 16px;
+        }
+
+        &::marker {
+          color: rgb(156, 163, 175);
+        }
+      }
+    }
+
+    > ul,
+    > ol {
+      margin-bottom: 32px;
+    }
+
+    ol {
+      border-left: 2px solid white;
+      padding-left: 40px;
+    }
+
+    strong {
+      font-weight: 600;
+      color: white;
+    }
+
+    iframe {
+      margin-inline: auto;
+      display: block;
+      max-width: 495px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
