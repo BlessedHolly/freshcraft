@@ -14,7 +14,7 @@ const Footer = () => {
           <h4>Дополнения</h4>
           <Link to="/dlc">Все дополнения</Link>
           <Link to="/dlc/fantasy">Fantasy - DLC</Link>
-          <Link to="/dlc/industry">SteamPunk Industry - DLC</Link>
+          <Link to="/dlc/industrial">SteamPunk Industrial - DLC</Link>
         </div>
         <div className={styles.item}>
           <h4>Сервера</h4>
