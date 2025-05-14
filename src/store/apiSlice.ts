@@ -57,7 +57,6 @@ const baseQueryWithReauth: BaseQueryFn<
 
   // Если публичный – просто выполняем и возвращаем
   if (isPublicEndpoint) {
-    console.log("public:", args, api, extraOptions);
     return rawBaseQuery(args, api, extraOptions);
   }
 
@@ -98,10 +97,6 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getProfile: builder.query<IGetProfileResponseData, void>({
       query: () => {
-        console.log(
-          localStorage.getItem(LOCAL_STORAGE_ACCESS_TOKEN_KEY),
-          localStorage.getItem(LOCAL_STORAGE_ACCESS_TOKEN_TYPE_KEY)
-        );
         return { url: "/profile", method: "GET" };
       },
       providesTags: ["Profile"],
@@ -184,7 +179,6 @@ export const apiSlice = createApi({
       { code: string; state?: string }
     >({
       query: (body) => {
-        console.log(body);
         return {
           url: "/oauth/xbox/callback",
           method: "POST",

@@ -13,7 +13,6 @@ export default function EmailVerify() {
     verifyEmail,
     { isLoading, isSuccess, isError, error, isUninitialized, data },
   ] = useEmailVerifyMutation();
-  console.log("emailVerify data:", data);
 
   const [remainTime, setRemainTime] = useState(10);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);

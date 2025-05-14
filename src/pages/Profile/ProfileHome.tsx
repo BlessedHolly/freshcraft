@@ -121,12 +121,7 @@ export default function ProfileHome() {
     getMicrosoftLink()
       .unwrap()
       .then((d) => {
-        console.log(d);
-        const redirectUrl = d.url.replace(
-          "freshcraft.org",
-          "fresh-i78m.vercel.app"
-        );
-        window.location.href = redirectUrl;
+        window.location.href = d.url;
       })
       .catch((err: FetchBaseQueryError) => {
         notify.error(

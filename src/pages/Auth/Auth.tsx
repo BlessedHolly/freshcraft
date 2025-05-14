@@ -148,13 +148,8 @@ export default function Auth() {
     setIsSubmitLocked(true);
     try {
       const res = await getMicrosoftLink().unwrap();
-      const redirectUrl = res.url.replace(
-        "freshcraft.org",
-        "fresh-i78m.vercel.app"
-      );
-      console.log(res.url, redirectUrl);
 
-      window.location.href = redirectUrl;
+      window.location.href = res.url;
     } catch (error: unknown) {
       const message = isApiError(error) ? error.data?.message : undefined;
       notify.error(message || "Ошибка Microsoft входа");

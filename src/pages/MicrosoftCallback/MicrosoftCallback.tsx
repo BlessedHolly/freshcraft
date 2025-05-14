@@ -27,7 +27,6 @@ const MicrosoftCallback = () => {
 
   const [callbackMicrosoft, { isLoading, isError, error }] =
     useMicrosoftCallbackMutation();
-  console.log("error:", error);
   const token = localStorage.getItem(LOCAL_STORAGE_ACCESS_TOKEN_KEY);
   const [, { isSuccess, isLoading: isLoadingLogout }] = useLogoutMutation();
   const { refetch: refetchProfile } = useGetProfileQuery(undefined, {
@@ -42,7 +41,6 @@ const MicrosoftCallback = () => {
 
   useEffect(() => {
     if (isString(code)) {
-      console.log(code, state);
       callbackMicrosoft({
         code,
         ...(isString(state) ? { state } : {}),
